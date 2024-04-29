@@ -1,8 +1,14 @@
 body {
-    background: rgb(139,139,139);
-    background: linear-gradient(90deg, rgba(139,139,139,1) 10%, rgba(241,241,241,1) 100%);  
+    background: rgb(181,181,181);
+    background: linear-gradient(0deg, rgb(221, 202, 255) 0%, rgba(255,255,255,1) 92%); 
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 header {
     background-color: rgb(255, 255, 255);
@@ -12,7 +18,8 @@ header {
     display: flex;
     justify-content: right;
     align-items: center;
-    margin-bottom: 5px;
+    margin: 5px;
+
 }
 
 .header-link {
@@ -25,17 +32,18 @@ header h3 {
 }
 
 .news-div {
-    margin-left: 0px;
+    margin-left: 5px;
+    margin-right: 10px;
     margin-bottom: 10px;
     background-color: white;
-    border: 1px solid rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .news-title {
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     margin-right: 5px;
     display: inline;
     font-size: 18px;
@@ -47,7 +55,7 @@ display: inline;
 color: slategray;
 margin-right: 5px;
 margin-top: 0px;
-margin-bottom: 5px;
+margin-bottom: 10px;
 align-items: center;
 font-size: 14px;
 }
@@ -62,14 +70,23 @@ font-size: 14px;
 }
 
 .about {
-    margin-left: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-bottom: 10px;
     background-color: white;
-    border: 1px solid rgb(0, 0, 0);
+    border: 2px solid rgb(85, 85, 85);
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .about p {
     margin-top: 5px;
+}
+
+section h1 {
+    margin-left: 5px;
+}
+
+.news-div div {
+    margin-bottom: 10px;
 }
