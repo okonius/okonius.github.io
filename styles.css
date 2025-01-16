@@ -1,92 +1,82 @@
+/* Podstawowe ustawienia */
 body {
-    background: rgb(181,181,181);
-    background: linear-gradient(0deg, rgb(221, 202, 255) 0%, rgba(255,255,255,1) 92%); 
-    background-repeat: no-repeat;
-    height: 100%;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    background-color: #1e1e1e; /* Dark background */
+    color: #f5f5f5; /* Light text color */
     margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
 }
 
-
-header {
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
-    border: 3px solid rgb(189, 189, 189);
-    border-radius: 10px;
+/* Nagłówek */
+.header {
+    background-color: #333; /* Darker header */
+    color: #ffffff;
+    padding: 15px;
     display: flex;
-    justify-content: right;
-    align-items: center;
-    margin: 5px;
-
-}
-
-.header-link {
-    margin-left: 5px;
-}
-
-header h3 {
-    margin: 0px auto 0 0;
-    ;
-}
-
-.news-div {
-    margin-left: 5px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    background-color: white;
-    border: 2px solid rgb(0, 0, 0);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.news-title {
-    margin-top: 0px;
-    margin-bottom: 10px;
-    margin-right: 5px;
-    display: inline;
-    font-size: 18px;
+    justify-content: space-between;
     align-items: center;
 }
 
-.news-date {
-display: inline;
-color: slategray;
-margin-right: 5px;
-margin-top: 0px;
-margin-bottom: 10px;
-align-items: center;
-font-size: 14px;
+.header h3 {
+    margin: 0;
 }
 
-.news-div span {
-    display: block;
+/* Główna zawartość */
+.main {
+    padding: 20px;
 }
 
-.news-ul {
+/* Sekcje */
+.section {
+    margin-bottom: 20px;
+    background: #2c2c2c; /* Darker section background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    border-bottom: 2px solid #4a90e2; /* Soft blue */
+    padding-bottom: 10px;
+}
+
+/* Lista */
+.list {
     list-style-type: none;
-    
+    padding: 0;
 }
 
-.about {
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-    background-color: white;
-    border: 2px solid rgb(85, 85, 85);
-    padding: 5px;
-    border-radius: 10px;
+.list-item {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
 }
 
-.about p {
-    margin-top: 5px;
+.list-item::before {
+    content: '•';
+    color: #4a90e2; /* Soft blue */
+    position: absolute;
+    left: 0;
 }
 
-section h1 {
-    margin-left: 5px;
+/* Stopka */
+.footer {
+    text-align: center;
+    background-color: #333; /* Darker footer */
+    color: #fff;
+    padding: 5px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-.news-div div {
-    margin-bottom: 10px;
+/* Linki */
+a {
+    color: #4a90e2; /* Soft blue */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6347; /* Tomato */
+    text-decoration: underline;
 }
