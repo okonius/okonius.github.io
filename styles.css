@@ -80,3 +80,11 @@ a:hover {
     color: #ff6347; /* Tomato */
     text-decoration: underline;
 }
+
+.project-li {
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #4a90e2;
+}
+
+.project-a {
+}
