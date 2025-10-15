@@ -1,0 +1,113 @@
+
+
+.rotate {
+
+  animation: obrot 3s linear infinite;
+}
+
+
+.rotate:hover  {
+
+    animation: obrot 0.01s linear infinite;
+    
+}
+
+@keyframes obrot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes obrot2 {
+  from {
+    transform: rotate(360deg)
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+iframe {
+
+    animation: obrot2 5s linear infinite;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+
+
+
+@keyframes zmianaTla {
+  0%   { background-color: #ff0000; }  /* czerwony */
+  25%  { background-color: #00ff00; }  /* zielony */
+  50%  { background-color: #0000ff; }  /* niebieski */
+  75%  { background-color: #ffff00; }  /* żółty */
+  100% { background-color: #ff0000; }  /* znowu czerwony */
+}
+
+.site {
+  animation: zmianaTla 30s linear infinite;
+}
+
+
+
+@keyframes pulsowanie {
+  0%, 100% {
+    font-size: 16px;
+  }
+  50% {
+    font-size: 32px;
+  }
+}
+
+.site-h1 {
+  animation: pulsowanie 3s linear infinite;
+  display: block;
+  text-align: center;
+}
+
+h2 {
+
+  display: block;
+  text-align: center;
+}
+
+.site-h1:hover {
+
+  animation: pulsowanie 0.5s linear infinite;
+}
+
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.align-center-site{
+  text-align: center;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.button {
+  padding: 10px;
+  background-color: #ff0000;
+  color: white;
+  stroke: 2px;
+  border-radius: 5px;
+  border-color: gray;
+  font-weight: bold;
+}
