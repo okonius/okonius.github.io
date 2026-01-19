@@ -1,0 +1,40 @@
+body {
+    font-family: monospace;
+    background-color: #1e1e1e;
+}
+
+.header {
+    background-color: #414141;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+    border-radius: 5px;
+    border: #7a6868 1px solid;
+
+}
+
+.nav-element {
+    color: white;
+    font-size: 24px;
+    display: inline;
+    margin: 0px;
+}
+.nav-link {
+    color: white;
+    font-size: 16px;
+    display: inline;
+    margin-left: 10px;
+}
+
+.site {
+    margin: 5px;
+    padding: 5px;
+
+}
+.site h1{
+    color: #FFFFFF;
+    text-align: center;
+
+}
