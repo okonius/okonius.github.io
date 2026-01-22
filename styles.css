@@ -1,18 +1,22 @@
 body {
     font-family: monospace;
-    background-color: #1e1e1e;
+    background-color: #0c0c0c;
 }
 
 .header {
-    background-color: #414141;
+    background-color: #2b2b2b;
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 5px;
     border-radius: 5px;
-    border: #7a6868 1px solid;
+    border: #009e00 1px solid;
 
+}
+
+nav {
+    width: auto;
 }
 
 .nav-element {
@@ -34,7 +38,13 @@ body {
 
 }
 .site h1{
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: center;
+    letter-spacing: 2px;
 
+}
+
+.site img {
+    display: flexbox;
+    justify-content: center;
 }
