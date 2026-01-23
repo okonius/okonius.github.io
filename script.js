@@ -1,5 +1,5 @@
 const text = "welcome to my page fellow human!";
-const speed = 75; // prędkość w milisekundach
+const speed = 75;
 let i = 0;
 
 function typeWriter() {
@@ -10,5 +10,4 @@ function typeWriter() {
   }
 }
 
-// Uruchom funkcję po załadowaniu strony
 window.onload = typeWriter;

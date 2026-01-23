@@ -12,8 +12,9 @@ body {
     margin: 5px;
     border-radius: 5px;
     border: #009e00 1px solid;
-
 }
+
+/* nav section */
 
 nav {
     width: auto;
@@ -31,20 +32,32 @@ nav {
     display: inline;
     margin-left: 10px;
 }
-
+ /* site section */
 .site {
     margin: 5px;
     padding: 5px;
+    color: #ffffff;
 
 }
 .site h1{
-    color: #ffffff;
     text-align: center;
     letter-spacing: 2px;
 
 }
 
 .site img {
-    display: flexbox;
-    justify-content: center;
+    display: flex;
+    justify-self: center;
+}
+
+.site h3 {
+    text-align: center;
+}
+
+/* footer section */
+
+.footer {
+    position: absolute; bottom: 0;
+    color: #acacac;
+    display: flex;
 }
