@@ -45,15 +45,18 @@ nav {
 
 }
 
-.site img {
-    display: flex;
-    justify-self: center;
-}
-
 .site h3 {
     text-align: center;
 }
 
+.site hr {
+    color: white;
+}
+
+.img-center {
+    display: flex;
+    justify-content: center;
+}
 /* footer section */
 
 .footer {
