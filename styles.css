@@ -38,6 +38,7 @@ nav {
     padding: 5px;
     color: #ffffff;
 
+
 }
 .site h1{
     text-align: center;
@@ -45,12 +46,22 @@ nav {
 
 }
 
+.site h2 {
+    text-align: center;
+}
 .site h3 {
     text-align: center;
 }
 
 .site hr {
     color: white;
+    width: 100%;
+}
+
+.site span {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
 }
 
 .img-center {
