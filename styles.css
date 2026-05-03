@@ -37,6 +37,15 @@ nav {
     font-size: 1rem;
     display: inline;
     margin-left: 10px;
+    text-decoration: no;
+}
+
+.nav-link-current {
+    color: white;
+    font-size: 1rem;
+    display: inline;
+    margin-left: 10px;
+    font-weight: bold;
 }
  /* site section */
 .site {
