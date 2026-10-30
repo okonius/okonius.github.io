@@ -2,7 +2,7 @@ backend:
   name: github
   repo: okonius/okonius.github.io
   branch: main
-  base_url: https://sveltia-cms-auth.vercel.app
+  app_id: Ov23liJthKvJSumcOEQo
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"

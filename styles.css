@@ -164,7 +164,6 @@ nav {
 .typewriter {
     min-height: 2.2rem;
     display: inline-block;
-    border-right: 2px solid var(--accent-secondary);
     padding-right: 4px;
 }
 
