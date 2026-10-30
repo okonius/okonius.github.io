@@ -3,7 +3,6 @@
     --container-bg-color: #17151c;
     --accent-primary: #8b5cf6;
     --accent-secondary: #c084fc;
-    --accent-link: #e9d5ff;
     --accent-gray: #a1a1aa;
     --accent-disabled: #a1a1aa;
     --accent-footer: #71717a;
@@ -53,7 +52,7 @@ nav {
 }
 
 .nav-link-current {
-    color: var(--accent-link);
+    color: var(--accent-secondary);
     font-size: 1rem;
     font-weight: bold;
     text-decoration: underline;
