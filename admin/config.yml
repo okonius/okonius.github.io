@@ -1,0 +1,54 @@
+backend:
+  name: github
+  repo: okonius/okonius.github.io
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "home_posts"
+    label: "home posts"
+    files:
+      - file: "data/posts.json"
+        label: "home updates & notes"
+        name: "posts_list"
+        fields:
+          - label: "posts"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "title", name: "title", widget: "string" }
+              - { label: "description", name: "desc", widget: "text" }
+              - { label: "optional link", name: "url", widget: "string", required: false }
+
+  - name: "useful_things"
+    label: "useful things"
+    files:
+      - file: "data/links.json"
+        label: "useful tools & links"
+        name: "links_list"
+        fields:
+          - label: "links"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "tool name", name: "title", widget: "string" }
+              - { label: "short description", name: "desc", widget: "text" }
+              - { label: "url (with https://)", name: "url", widget: "string" }
+
+  - name: "projects"
+    label: "projects"
+    files:
+      - file: "data/projects.json"
+        label: "my projects"
+        name: "projects_list"
+        fields:
+          - label: "projects"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "project title", name: "title", widget: "string" }
+              - { label: "short description", name: "desc", widget: "text" }
+              - { label: "project link", name: "url", widget: "string", required: false }
+              - { label: "work in progress (wip)", name: "is_wip", widget: "boolean", default: false }
