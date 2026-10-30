@@ -1,13 +1,72 @@
-const text = "welcome to my page fellow human!";
-const speed = 75;
-let i = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. typewriter
+    const tw = document.querySelector(".typewriter");
+    if (tw) {
+        const text = tw.getAttribute("data-text") || tw.textContent;
+        tw.textContent = "";
+        let i = 0;
+        function type() {
+            if (i < text.length) {
+                tw.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 80);
+            }
+        }
+        type();
+    }
 
-function typeWriter() {
-  if (i < text.length) {
-    document.getElementById("title").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
+    // wykrywanie czy jestesmy w podfolderze (np. useful_things/) czy w glownym katalogu
+    const inSubfolder = window.location.pathname.includes("/useful_things/") || window.location.pathname.includes("/projects/");
+    const dataPrefix = inSubfolder ? "../data/" : "data/";
 
-window.onload = typeWriter;
+    // 2. home posts
+    const homeBox = document.getElementById("home-posts-list");
+    if (homeBox) {
+        fetch(dataPrefix + "posts.json")
+            .then(res => res.json())
+            .then(data => {
+                homeBox.innerHTML = data.items.map(item => `
+                    <div class="site-box">
+                        <h3>${item.title.toLowerCase()}</h3>
+                        <p>${item.desc.toLowerCase()}</p>
+                        ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener">&gt; ${item.url.replace(/^https?:\/\//, "").toLowerCase()}</a>` : ""}
+                    </div>
+                `).join("");
+            })
+            .catch(err => console.error(err));
+    }
+
+    // 3. useful things
+    const usefulBox = document.getElementById("useful-things-list");
+    if (usefulBox) {
+        fetch(dataPrefix + "links.json")
+            .then(res => res.json())
+            .then(data => {
+                usefulBox.innerHTML = data.items.map(item => `
+                    <div class="site-box">
+                        <h3>${item.title.toLowerCase()}</h3>
+                        <p>${item.desc.toLowerCase()}</p>
+                        <a href="${item.url}" target="_blank" rel="noopener">&gt; ${item.url.replace(/^https?:\/\//, "").toLowerCase()}</a>
+                    </div>
+                `).join("");
+            })
+            .catch(err => console.error(err));
+    }
+
+    // 4. projects
+    const projectsBox = document.getElementById("projects-list");
+    if (projectsBox) {
+        fetch(dataPrefix + "projects.json")
+            .then(res => res.json())
+            .then(data => {
+                projectsBox.innerHTML = data.items.map(item => `
+                    <div class="${item.is_wip ? "site-box-wip" : "site-box"}">
+                        <h3>${item.title.toLowerCase()}</h3>
+                        <p>${item.desc.toLowerCase()}</p>
+                        ${item.is_wip ? `<span>&gt; not available yet</span>` : `<a href="${item.url}" target="_blank" rel="noopener">&gt; ${item.url.replace(/^https?:\/\//, "").toLowerCase()}</a>`}
+                    </div>
+                `).join("");
+            })
+            .catch(err => console.error(err));
+    }
+});
