@@ -3,17 +3,20 @@
     {
       "title": "delphi tools",
       "desc": "a set of useful tools like background remover, qr code generator, gradient generator and more",
-      "url": "https://delphi.tools"
+      "url": "https://delphi.tools",
+      "link_text": "delphi tools"
     },
     {
       "title": "subtitles by fframes",
       "desc": "free no-signup subtitles generator running entirely in browser",
-      "url": "https://subtitles.fframes.studio"
+      "url": "https://subtitles.fframes.studio",
+      "link_text": "subtitles studio by fframes"
     },
     {
       "title": "text to tree generator",
       "desc": "a simple online tool that converts plain text lists into visual ascii folder tree structures",
-      "url": "https:/text-2-tree.com"
+      "url": "https://www.text-2-tree.com",
+      "link_text": "visit text-2-tree"
     }
   ]
 }

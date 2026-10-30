@@ -37,36 +37,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 3. useful things
-    const usefulBox = document.getElementById("useful-things-list");
+const usefulBox = document.getElementById("useful-things-list");
     if (usefulBox) {
         fetch(dataPrefix + "links.json")
             .then(res => res.json())
             .then(data => {
-                usefulBox.innerHTML = data.items.map(item => `
+                usefulBox.innerHTML = data.items.map(item => {
+                    const label = item.link_text ? item.link_text.toLowerCase() : item.url.replace(/^https?:\/\//, "").toLowerCase();
+                    return `
                     <div class="site-box">
                         <h3>${item.title.toLowerCase()}</h3>
                         <p>${item.desc.toLowerCase()}</p>
-                        <a href="${item.url}" target="_blank" rel="noopener">&gt; ${item.url.replace(/^https?:\/\//, "").toLowerCase()}</a>
+                        <a href="${item.url}" target="_blank" rel="noopener">&gt; ${label}</a>
                     </div>
-                `).join("");
+                `;
+                }).join("");
             })
             .catch(err => console.error(err));
     }
 
-    // 4. projects
     const projectsBox = document.getElementById("projects-list");
     if (projectsBox) {
         fetch(dataPrefix + "projects.json")
             .then(res => res.json())
             .then(data => {
-                projectsBox.innerHTML = data.items.map(item => `
+                projectsBox.innerHTML = data.items.map(item => {
+                    const label = item.link_text ? item.link_text.toLowerCase() : (item.url ? item.url.replace(/^https?:\/\//, "").toLowerCase() : "");
+                    return `
                     <div class="${item.is_wip ? "site-box-wip" : "site-box"}">
                         <h3>${item.title.toLowerCase()}</h3>
                         <p>${item.desc.toLowerCase()}</p>
-                        ${item.is_wip ? `<span>&gt; not available yet</span>` : `<a href="${item.url}" target="_blank" rel="noopener">&gt; ${item.url.replace(/^https?:\/\//, "").toLowerCase()}</a>`}
+                        ${item.is_wip ? `<span>&gt; ${label || "not available yet"}</span>` : `<a href="${item.url}" target="_blank" rel="noopener">&gt; ${label}</a>`}
                     </div>
-                `).join("");
+                `;
+                }).join("");
             })
             .catch(err => console.error(err));
-    }
+}
 });
