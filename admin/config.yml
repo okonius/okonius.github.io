@@ -20,8 +20,8 @@ collections:
             widget: "list"
             fields:
               - { label: "title", name: "title", widget: "string" }
+              - { label: "date (dd/mm/yyyy)", name: "date", widget: "datetime", format: "DD/MM/YYYY", date_format: "DD/MM/YYYY", time_format: false }
               - { label: "desc", name: "desc", widget: "text" }
-              - { label: "url", name: "url", widget: "string", required: false }
 
   - name: "useful_things"
     label: "useful things"

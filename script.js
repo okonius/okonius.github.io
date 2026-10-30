@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 homeBox.innerHTML = data.items.map(item => `
                     <div class="site-box">
                         <h3>${item.title.toLowerCase()}</h3>
+                        <span class="post-date">${item.date || ""}</span>
                         <p>${item.desc.toLowerCase()}</p>
-                        ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener">&gt; ${item.url.replace(/^https?:\/\//, "").toLowerCase()}</a>` : ""}
                     </div>
                 `).join("");
             })
