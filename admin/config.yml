@@ -20,10 +20,10 @@ collections:
             widget: "list"
             fields:
               - { label: "title", name: "title", widget: "string" }
-              - { label: "date (dd/mm/yyyy)", name: "date", widget: "datetime", format: "DD/MM/YYYY", date_format: "DD/MM/YYYY", time_format: false }
+              - { label: "date", name: "date", widget: "string" }
               - { label: "desc", name: "desc", widget: "text" }
 
-- name: "useful_things"
+  - name: "useful_things"
     label: "useful things"
     files:
       - label: "links"
