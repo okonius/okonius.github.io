@@ -2,7 +2,7 @@ backend:
   name: github
   repo: okonius/okonius.github.io
   branch: main
-  app_id: Ov23liJthKvJSumcOEQo
+  base_url: https://sveltia-auth.okonius.workers.dev
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
