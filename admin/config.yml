@@ -1,57 +1,73 @@
 backend:
-  name: github
-  repo: okonius/okonius.github.io
-  branch: main
-  base_url: https://sveltia-auth.okonius.workers.dev
+    name: github
+    repo: okonius/okonius.github.io
+    branch: main
+    base_url: https://sveltia-auth.okonius.workers.dev
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: 'assets/uploads'
+public_folder: '/assets/uploads'
 
 collections:
-  - name: "home"
-    label: "home"
-    files:
-      - label: "posts"
-        name: "posts"
-        file: "data/posts.json"
-        fields:
-          - label: "items"
-            name: "items"
-            widget: "list"
+    - name: 'home'
+      label: 'home'
+      files:
+          - label: 'posts'
+            name: 'posts'
+            file: 'data/posts.json'
             fields:
-              - { label: "title", name: "title", widget: "string" }
-              - { label: "date", name: "date", widget: "string" }
-              - { label: "desc", name: "desc", widget: "text" }
+                - label: 'items'
+                  name: 'items'
+                  widget: 'list'
+                  fields:
+                      - { label: 'title', name: 'title', widget: 'string' }
+                      - { label: 'date', name: 'date', widget: 'string' }
+                      - { label: 'desc', name: 'desc', widget: 'text' }
 
-  - name: "useful_things"
-    label: "useful things"
-    files:
-      - label: "links"
-        name: "links"
-        file: "data/links.json"
-        fields:
-          - label: "items"
-            name: "items"
-            widget: "list"
+    - name: 'useful_things'
+      label: 'useful things'
+      files:
+          - label: 'links'
+            name: 'links'
+            file: 'data/links.json'
             fields:
-              - { label: "title", name: "title", widget: "string" }
-              - { label: "desc", name: "desc", widget: "text" }
-              - { label: "url", name: "url", widget: "string" }
-              - { label: "link text", name: "link_text", widget: "string", required: false }
+                - label: 'items'
+                  name: 'items'
+                  widget: 'list'
+                  fields:
+                      - { label: 'title', name: 'title', widget: 'string' }
+                      - { label: 'desc', name: 'desc', widget: 'text' }
+                      - { label: 'url', name: 'url', widget: 'string' }
+                      - { label: 'link text', name: 'link_text', widget: 'string', required: false }
 
-  - name: "projects"
-    label: "projects"
-    files:
-      - label: "projects"
-        name: "projects"
-        file: "data/projects.json"
-        fields:
-          - label: "items"
-            name: "items"
-            widget: "list"
+    - name: 'projects'
+      label: 'projects'
+      files:
+          - label: 'projects'
+            name: 'projects'
+            file: 'data/projects.json'
             fields:
-              - { label: "title", name: "title", widget: "string" }
-              - { label: "desc", name: "desc", widget: "text" }
-              - { label: "url", name: "url", widget: "string", required: false }
-              - { label: "link text", name: "link_text", widget: "string", required: false }
-              - { label: "is_wip", name: "is_wip", widget: "boolean", default: false }
+                - label: 'items'
+                  name: 'items'
+                  widget: 'list'
+                  fields:
+                      - { label: 'title', name: 'title', widget: 'string' }
+                      - { label: 'desc', name: 'desc', widget: 'text' }
+                      - { label: 'url', name: 'url', widget: 'string', required: false }
+                      - { label: 'link text', name: 'link_text', widget: 'string', required: false }
+                      - { label: 'is_wip', name: 'is_wip', widget: 'boolean', default: false }
+
+    - name: 'cool_places'
+      label: 'cool places'
+      files:
+          - label: 'places'
+            name: 'places'
+            file: 'data/cool_places.json'
+            fields:
+                - label: 'items'
+                  name: 'items'
+                  widget: 'list'
+                  fields:
+                      - { label: 'title', name: 'title', widget: 'string' }
+                      - { label: 'desc', name: 'desc', widget: 'text' }
+                      - { label: 'url', name: 'url', widget: 'string' }
+                      - { label: 'link text', name: 'link_text', widget: 'string', required: false }

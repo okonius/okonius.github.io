@@ -1,11 +1,11 @@
 {
-  "items": [
-    {
-      "title": "mininotepad",
-      "desc": "a simple, lightweight terminal notepad for taking simple unformatted notes",
-      "url": "",
-      "link_text": "not available yet",
-      "is_wip": true
-    }
-  ]
+    "items": [
+        {
+            "title": "mininotepad",
+            "desc": "a simple, lightweight terminal notepad for taking simple unformatted notes",
+            "url": "",
+            "link_text": "not available yet",
+            "is_wip": true
+        }
+    ]
 }
