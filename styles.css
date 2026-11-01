@@ -1,9 +1,9 @@
 :root {
-    --site-bg-color: #0c0c0c;
-    --container-bg-color: #17151c;
+    --site-bg-color: #000000;
+    --container-bg-color: #06040a;
     --accent-primary: #8b5cf6;
     --accent-secondary: #c084fc;
-    --accent-dark: #3a0074;
+    --accent-dark: #37126b;
     --accent-gray: #a1a1aa;
     --accent-disabled: #a1a1aa;
     --accent-footer: #71717a;
@@ -68,6 +68,7 @@ nav {
     animation: pulse 2s infinite ease-in-out;
     margin-right: 16px;
 }
+
 .nav-link {
     color: white;
     font-size: 1rem;

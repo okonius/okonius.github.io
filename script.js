@@ -15,10 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
         type();
     }
 
-    // wykrywanie czy jestesmy w podfolderze (np. useful_things/) czy w glownym katalogu
+    // wykrywanie czy jestesmy w podfolderze (np. useful_things/, projects/, cool_places/)
     const inSubfolder =
         window.location.pathname.includes('/useful_things/') ||
-        window.location.pathname.includes('/projects/');
+        window.location.pathname.includes('/projects/') ||
+        window.location.pathname.includes('/cool_places/');
     const dataPrefix = inSubfolder ? '../data/' : 'data/';
 
     // 2. home posts
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(err => console.error(err));
     }
 
+    // 4. projects
     const projectsBox = document.getElementById('projects-list');
     if (projectsBox) {
         fetch(dataPrefix + 'projects.json')
@@ -94,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. cool places
     const coolPlacesBox = document.getElementById('cool-places-list');
     if (coolPlacesBox) {
-        fetch(dataPrefix + 'cool_places.json')
+        fetch(dataPrefix + 'places.json')
             .then(res => res.json())
             .then(data => {
                 coolPlacesBox.innerHTML = data.items

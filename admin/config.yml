@@ -61,7 +61,7 @@ collections:
       files:
           - label: 'places'
             name: 'places'
-            file: 'data/cool_places.json'
+            file: 'data/places.json'
             fields:
                 - label: 'items'
                   name: 'items'
