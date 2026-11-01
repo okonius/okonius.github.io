@@ -1,9 +1,14 @@
 {
-    "items": [
-        {
-            "title": "welcome to my site",
-            "date": "30/10/2026",
-            "desc": "site rebuilt with sveltia cms, added posts on home and changed theme to purple (my fav color)"
-        }
-    ]
+  "items": [
+    {
+      "title": "the domain is up!",
+      "date": "01/11/2026",
+      "desc": "i bought the domain and also pushed updates to the site, first of all i made new subpage called \"cool places\" where you can see as the name says cool sites that i often visit. also i added a contact me section in \"about me\""
+    },
+    {
+      "title": "welcome to my site",
+      "date": "30/10/2026",
+      "desc": "site rebuilt with sveltia cms, added posts on home and changed theme to purple (my fav color)"
+    }
+  ]
 }
