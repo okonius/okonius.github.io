@@ -1,6 +1,6 @@
 :root {
     --site-bg-color: #000000;
-    --container-bg-color: #06040a;
+    --container-bg-color: #191325;
     --accent-primary: #8b5cf6;
     --accent-secondary: #c084fc;
     --accent-dark: #37126b;
@@ -131,6 +131,12 @@ nav {
     font-size: 1.05rem;
 }
 
+.contact {
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.5rem;
+
+}
 .site-list {
     width: 100%;
     max-width: 800px;
